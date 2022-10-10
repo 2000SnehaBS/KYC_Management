@@ -20,44 +20,44 @@ import com.sixdee.kyc.service.SD_KYC_FIELD_MASTER_Service;
 public class SD_KYC_FIELD_MASTER_Controller {
 	
 	@Autowired
-	SD_KYC_FIELD_MASTER_Service service;
+	SD_KYC_FIELD_MASTER_Service masterService;
 	
 	@Autowired
-	SD_KYC_FIELD_MASTER_Repo repo;
+	SD_KYC_FIELD_MASTER_Repo masterRepo;
 	
 	
-	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/adddetails")
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/add_master_details")
     public SD_KYC_FIELD_MASTER insert(@RequestBody SD_KYC_FIELD_MASTER master)
     {
-        return service.add(master);
+        return masterService.add(master);
     }
 	
-	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/updatedetails")
+	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/update_master_details")
     public SD_KYC_FIELD_MASTER update(@RequestBody SD_KYC_FIELD_MASTER master)
     {
-        return service.update(master);
+        return masterService.update(master);
     }
 	
-	@DeleteMapping(value="/delete/{fieldId}")
+	@DeleteMapping(value="/delete_master/{fieldId}")
 	public String deleteData(@PathVariable int fieldId) {
-		return service.delete(fieldId);
+		return masterService.delete(fieldId);
 		
 	}
 	
-	@GetMapping(value="/getdetails/{fieldId}")
+	@GetMapping(value="/get_master_details/{fieldId}")
 	public SD_KYC_FIELD_MASTER findById(@PathVariable int fieldId) {
 		
-		if(repo.findById(fieldId).isPresent()) {
-			return repo.findById(fieldId).get();
+		if(masterRepo.findById(fieldId).isPresent()) {
+			return masterRepo.findById(fieldId).get();
 		}
 		else
 		return null;
 		
 	}
 	
-	@GetMapping(value="/getdetails")
+	@GetMapping(value="/get_all_master_details")
 	public List<SD_KYC_FIELD_MASTER> findAllById(){
-		return repo.findAll();
+		return masterRepo.findAll();
 		
 	}
 
