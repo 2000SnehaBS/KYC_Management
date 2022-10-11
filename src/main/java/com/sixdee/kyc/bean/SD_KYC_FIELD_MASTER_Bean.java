@@ -1,12 +1,24 @@
 package com.sixdee.kyc.bean;
 
+import com.sixdee.kyc.entity.SD_KYC_FIELD_TYPES;
+import com.sixdee.kyc.entity.SD_KYC_GROUPS;
+
 public class SD_KYC_FIELD_MASTER_Bean {
 	
 	private Integer fieldId;
 	private String fieldName;
-	private String fieldType;
-	private Integer tagType;
+	private SD_KYC_FIELD_TYPES fieldType;
+	private SD_KYC_GROUPS tagType;
 	private String dropDown;
+	public SD_KYC_FIELD_MASTER_Bean(Integer fieldId, String fieldName, SD_KYC_FIELD_TYPES fieldType,
+			SD_KYC_GROUPS tagType, String dropDown) {
+		super();
+		this.fieldId = fieldId;
+		this.fieldName = fieldName;
+		this.fieldType = fieldType;
+		this.tagType = tagType;
+		this.dropDown = dropDown;
+	}
 	public Integer getFieldId() {
 		return fieldId;
 	}
@@ -19,16 +31,16 @@ public class SD_KYC_FIELD_MASTER_Bean {
 	public void setFieldName(String fieldName) {
 		this.fieldName = fieldName;
 	}
-	public String getFieldType() {
+	public SD_KYC_FIELD_TYPES getFieldType() {
 		return fieldType;
 	}
-	public void setFieldType(String fieldType) {
+	public void setFieldType(SD_KYC_FIELD_TYPES fieldType) {
 		this.fieldType = fieldType;
 	}
-	public Integer getTagType() {
+	public SD_KYC_GROUPS getTagType() {
 		return tagType;
 	}
-	public void setTagType(Integer tagType) {
+	public void setTagType(SD_KYC_GROUPS tagType) {
 		this.tagType = tagType;
 	}
 	public String getDropDown() {
@@ -37,19 +49,9 @@ public class SD_KYC_FIELD_MASTER_Bean {
 	public void setDropDown(String dropDown) {
 		this.dropDown = dropDown;
 	}
-	@Override
-	public String toString() {
-		return "SD_KYC_FIELD_MASTER_Bean [fieldId=" + fieldId + ", fieldName=" + fieldName + ", fieldType=" + fieldType
-				+ ", tagType=" + tagType + ", dropDown=" + dropDown + "]";
-	}
-	public SD_KYC_FIELD_MASTER_Bean(Integer fieldId, String fieldName, String fieldType, Integer tagType,
-			String dropDown) {
+	public SD_KYC_FIELD_MASTER_Bean() {
 		super();
-		this.fieldId = fieldId;
-		this.fieldName = fieldName;
-		this.fieldType = fieldType;
-		this.tagType = tagType;
-		this.dropDown = dropDown;
+		// TODO Auto-generated constructor stub
 	}
 	
 	
