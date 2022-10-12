@@ -32,11 +32,12 @@ public class SD_KYC_FIELD_TYPES_Controller {
         return typesService.add(types);
     }
 	
-	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/update_types_details")
+	/*@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/update_types_details")
     public SD_KYC_FIELD_TYPES update(@RequestBody SD_KYC_FIELD_TYPES types)
     {
         return typesService.update(types);
-    }
+    }*/
+	
 	@DeleteMapping(value="/delete_types/{id}")
 	public String deleteData(@PathVariable int id) {
 		return typesService.delete(id);

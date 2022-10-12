@@ -25,7 +25,7 @@ public class SD_KYC_GROUPS_ServiceImpl implements SD_KYC_GROUPS_Service {
 		return groupsRepo.save(gs);
 	}
 
-	@Override
+	/*@Override
 	public SD_KYC_GROUPS update(SD_KYC_GROUPS groups) {
 		SD_KYC_GROUPS gs = new SD_KYC_GROUPS();
 		gs.setId(groups.getId());
@@ -34,7 +34,7 @@ public class SD_KYC_GROUPS_ServiceImpl implements SD_KYC_GROUPS_Service {
 		gs.setGroupOrder(groups.getGroupOrder());
 		gs.setParent(groups.getParent());
 		return groupsRepo.save(gs);
-	}
+	}*/
      
 	
 	@Override

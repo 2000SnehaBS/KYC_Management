@@ -31,11 +31,11 @@ public class SD_KYC_GROUPS_Controller {
         return groupsService.add(groups);
     }
 
-	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/update_groups_details")
+	/*@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/update_groups_details")
     public SD_KYC_GROUPS update(@RequestBody SD_KYC_GROUPS groups)
     {
         return groupsService.update(groups);
-    }
+    }*/
 	
 	@DeleteMapping(value="/delete_groups/{id}")
 	public String deleteData(@PathVariable int id) {

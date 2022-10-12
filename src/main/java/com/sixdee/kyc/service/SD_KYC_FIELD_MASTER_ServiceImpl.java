@@ -23,7 +23,7 @@ public class SD_KYC_FIELD_MASTER_ServiceImpl implements SD_KYC_FIELD_MASTER_Serv
 		return masterRepo.save(mr);
 	}
 
-	@Override
+	/*@Override
 	public SD_KYC_FIELD_MASTER update(SD_KYC_FIELD_MASTER master) {
 		SD_KYC_FIELD_MASTER mr = new SD_KYC_FIELD_MASTER();
 		mr.setFieldId(master.getFieldId());
@@ -33,7 +33,7 @@ public class SD_KYC_FIELD_MASTER_ServiceImpl implements SD_KYC_FIELD_MASTER_Serv
 		mr.setDropDown(master.getDropDown());
 		return masterRepo.save(mr);
 		
-	}
+	}*/
 
 	@Override
 	public String delete(int fieldId) {
