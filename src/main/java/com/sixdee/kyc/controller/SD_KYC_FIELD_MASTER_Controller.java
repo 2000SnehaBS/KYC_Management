@@ -32,11 +32,11 @@ public class SD_KYC_FIELD_MASTER_Controller {
         return masterService.add(master);
     }
 	
-	/*@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/update_master_details")
+	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/update_master_details")
     public SD_KYC_FIELD_MASTER update(@RequestBody SD_KYC_FIELD_MASTER master)
     {
         return masterService.update(master);
-    }*/
+    }
 	
 	@DeleteMapping(value="/delete_master/{fieldId}")
 	public String deleteData(@PathVariable int fieldId) {

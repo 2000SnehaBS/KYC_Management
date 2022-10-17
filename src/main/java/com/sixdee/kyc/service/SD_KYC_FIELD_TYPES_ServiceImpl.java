@@ -23,13 +23,13 @@ public class SD_KYC_FIELD_TYPES_ServiceImpl implements SD_KYC_FIELD_TYPES_Servic
 		return typesRepo.save(ty) ;
 	}
 
-	/*@Override
+	@Override
 	public SD_KYC_FIELD_TYPES update(SD_KYC_FIELD_TYPES types) {
 		SD_KYC_FIELD_TYPES ty = new SD_KYC_FIELD_TYPES();
 		ty.setId(types.getId());
 		ty.setName(types.getName());
 		return typesRepo.save(ty) ;
-	}*/
+	}
 
 	@Override
 	public String delete(int id) {
