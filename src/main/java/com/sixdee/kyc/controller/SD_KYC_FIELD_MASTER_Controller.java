@@ -55,10 +55,10 @@ public class SD_KYC_FIELD_MASTER_Controller {
 		
 	}
 	
-	@GetMapping(value="/get_all_master_details")
+	/*@GetMapping(value="/get_all_master_details")
 	public List<SD_KYC_FIELD_MASTER> findAllById(){
 		return masterRepo.findAll();
 		
-	}
+	}*/
 
 }
